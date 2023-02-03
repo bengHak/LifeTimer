@@ -43,10 +43,9 @@ private class DemoLabelView: UIView {
     }
 }
 
-#if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-private struct DemoLabelPreview: PreviewProvider {
+struct DemoLabelPreview: PreviewProvider {
     static var previews: some View {
         UIViewPreview {
             DemoLabelView()
@@ -55,4 +54,3 @@ private struct DemoLabelPreview: PreviewProvider {
         )
     }
 }
-#endif

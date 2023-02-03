@@ -48,7 +48,7 @@ public struct FrameworkFactory {
         let sourceTarget = Target(
             name: payload.name,
             platform: payload.platform,
-            product: .staticFramework,
+            product: .framework,
             bundleId: payload.name,
             deploymentTarget: deploymentTarget,
             infoPlist: .default,
@@ -95,7 +95,7 @@ public struct FrameworkFactory {
         let implementTarget = Target(
             name: "\(payload.name)Impl",
             platform: payload.platform,
-            product: .staticFramework,
+            product: .framework,
             bundleId: "\(payload.name)Impl",
             deploymentTarget: deploymentTarget,
             infoPlist: .default,

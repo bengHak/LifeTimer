@@ -38,5 +38,3 @@ let project = ProjectFactory(
         organizationName: "kr.byunghak"
     )
 )
-
-

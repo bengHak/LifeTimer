@@ -6,9 +6,8 @@
 //  Copyright © 2023 kr.byunghak. All rights reserved.
 //
 
-#if DEBUG
+#if canImport(SwiftUI) && DEBUG
 import SwiftUI
-
 public extension UIViewController {
     private struct Preview: UIViewControllerRepresentable {
         let viewController: UIViewController

@@ -6,9 +6,8 @@
 //  Copyright © 2023 kr.byunghak. All rights reserved.
 //
 
-#if DEBUG
+#if canImport(SwiftUI) && DEBUG
 import SwiftUI
-
 public struct UIViewPreview<View: UIView>: UIViewRepresentable {
     public let view: View
 
@@ -17,7 +16,6 @@ public struct UIViewPreview<View: UIView>: UIViewRepresentable {
     }
 
     // MARK: - UIViewRepresentable
-
     public func makeUIView(context: Context) -> UIView {
         return view
     }

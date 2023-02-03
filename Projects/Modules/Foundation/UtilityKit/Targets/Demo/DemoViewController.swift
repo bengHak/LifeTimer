@@ -39,10 +39,10 @@ private class DemoUIViewController: UIViewController {
     }
 }
 
-#if DEBUG
+#if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
-private struct DemoUIViewControllerPreview: PreviewProvider {
+struct DemoUIViewControllerPreview: PreviewProvider {
     static var previews: some View {
         DemoUIViewController().showPreview(.iPhone14Pro)
     }
