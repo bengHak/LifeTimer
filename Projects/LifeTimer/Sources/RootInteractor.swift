@@ -42,5 +42,6 @@ final class RootInteractor: PresentableInteractor<RootPresentable>,
     
     func closeSplash() {
         self.router?.detachSplash()
+        print(#function)
     }
 }

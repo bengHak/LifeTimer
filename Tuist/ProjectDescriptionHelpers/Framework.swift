@@ -82,7 +82,7 @@ public struct FrameworkFactory {
         let interfaceTarget = Target(
             name: payload.name,
             platform: payload.platform,
-            product: .staticFramework,
+            product: .staticLibrary,
             bundleId: payload.name,
             deploymentTarget: deploymentTarget,
             infoPlist: .default,

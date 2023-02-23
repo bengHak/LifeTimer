@@ -32,7 +32,7 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
 #if DEBUG
 import SwiftUI
 
-private struct RootViewControllerPreview: PreviewProvider {
+struct RootViewControllerPreview: PreviewProvider {
     static var previews: some View {
         RootViewController().showPreview(.iPhone14Pro)
     }
