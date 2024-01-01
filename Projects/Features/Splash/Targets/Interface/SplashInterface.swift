@@ -8,9 +8,7 @@
 
 import RIBs
 
-public protocol SplashRouting: ViewableRouting {
-
-}
+public protocol SplashRouting: ViewableRouting { }
 
 public protocol SplashBuildable: Buildable {
     func build(withListener listener: SplashListener) -> SplashRouting

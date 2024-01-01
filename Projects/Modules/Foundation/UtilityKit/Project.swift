@@ -7,7 +7,6 @@
 
 import ProjectDescription
 import ProjectDescriptionHelpers
-import UtilityPlugin
 
 let frameworkName: String = "UtilityKit"
 

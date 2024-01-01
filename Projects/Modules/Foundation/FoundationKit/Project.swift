@@ -13,7 +13,7 @@ let frameworkName: String = "FoundationKit"
 
 let frameworkTargets: [Target] = FrameworkFactory(
     dependency: .init(
-        frameworkDependencies: [.Project.Module.Foundation.UtilityKit],
+        frameworkDependencies: [Dep.Project.Module.Foundation.UtilityKit],
         unitTestsDependencies: []
     )
 ).build(

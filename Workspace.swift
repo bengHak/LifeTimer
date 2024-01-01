@@ -13,22 +13,36 @@ let workspace = Workspace(
     projects: [
         "Projects/LifeTimer",
         "Projects/Features/Splash",
+        "Projects/Features/Onboarding",
         "Projects/Modules/RxPackageExt",
         "Projects/Modules/ThirdPartyLibrary",
         "Projects/Modules/Foundation/FoundationKit",
-        "Projects/Modules/Foundation/UtilityKit"
+        "Projects/Modules/Foundation/UtilityKit",
+        "Projects/Modules/DesignSystem/DesignSystemKit",
+        "Projects/Modules/DesignSystem/DesignResourceKit"
     ],
     schemes: [
         Scheme(
             name: "LifeTimerApp",
-            buildAction: .buildAction(targets: [
-                .project(path: "Projects/LifeTimer", target: "LifeTimer"),
-                .project(path: "Projects/Features/Splash", target: "Splash"),
-                .project(path: "Projects/Modules/RxPackageExt", target: "RxPackageExt"),
-                .project(path: "Projects/Modules/ThirdPartyLibrary", target: "ThirdPartyLibrary"),
-                .project(path: "Projects/Modules/Foundation/FoundationKit", target: "FoundationKit"),
-                .project(path: "Projects/Modules/Foundation/UtilityKit", target: "UtilityKit")
-            ])
+            buildAction: .buildAction(
+                targets: [
+                    [
+                        .project(path: "Projects/LifeTimer", target: "LifeTimer"),
+                    ],
+                    [
+                        .project(path: "Projects/Features/Splash", target: "Splash"),
+                        .project(path: "Projects/Features/Onboarding", target: "Onboarding")
+                    ],
+                    [
+                        .project(path: "Projects/Modules/RxPackageExt", target: "RxPackageExt"),
+                        .project(path: "Projects/Modules/ThirdPartyLibrary", target: "ThirdPartyLibrary"),
+                        .project(path: "Projects/Modules/Foundation/FoundationKit", target: "FoundationKit"),
+                        .project(path: "Projects/Modules/Foundation/UtilityKit", target: "UtilityKit"),
+                        .project(path: "Projects/Modules/DesignSystem/DesignSystemKit", target: "DesignSystemKit"),
+                        .project(path: "Projects/Modules/DesignSystem/DesignResourceKit", target: "DesignResourceKit")
+                    ]
+                ].flatMap { $0 }
+            )
         )
     ],
     generationOptions: .options(

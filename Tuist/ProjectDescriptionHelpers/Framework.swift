@@ -27,13 +27,19 @@ public struct FrameworkFactory {
         
         let name: String
         let platform: Platform
+        let product: Product
+        let hasResource: Bool
         
         public init(
             name: String,
-            platform: Platform
+            platform: Platform,
+            product: Product = .framework,
+            hasResource: Bool = false
         ) {
             self.name = name
             self.platform = platform
+            self.product = product
+            self.hasResource = hasResource
         }
     }
     
@@ -48,12 +54,12 @@ public struct FrameworkFactory {
         let sourceTarget = Target(
             name: payload.name,
             platform: payload.platform,
-            product: .framework,
+            product: payload.product,
             bundleId: payload.name,
             deploymentTarget: deploymentTarget,
             infoPlist: .default,
             sources: ["Targets/**"],
-            resources: [],
+            resources: payload.hasResource ? ["Resources/**"] : [],
             scripts: [.SwiftLintString],
             dependencies: self.dependency.frameworkDependencies
         )

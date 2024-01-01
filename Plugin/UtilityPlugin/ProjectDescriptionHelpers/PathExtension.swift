@@ -34,7 +34,6 @@ extension Dep {
     static func feature(name: String, path: String) -> Self {
         return .project(target: name, path: .relativeToFeature(path))
     }
-    
     static func network(name: String) -> Self {
         return .project(target: name, path: .relativeToNetwork(name))
     }
@@ -45,12 +44,10 @@ extension Dep {
     public struct Project {
         public struct Feature {}
         public struct Module {
-            public struct Core {
-                public struct Network {}
-            }
+            public struct Core {}
+            public struct DesignSystem {}
             public struct Foundation {}
         }
-        public struct Network {}
     }
 }
 
@@ -62,8 +59,16 @@ public extension Dep.Project.Feature {
 public extension Dep.Project.Module.Core {
     static func project(name: String) -> Dep { .project(target: name, path: .relativeToRoot("Projects/Modules/Core/\(name)")) }
 
-    static let RxPackageExt = project(name: "RxPackageExt")
+    static let NetworkKit        = project(name: "NetworkKit")
+    static let RxPackageExt      = project(name: "RxPackageExt")
     static let ThirdPartyLibrary = project(name: "ThirdPartyLibrary")
+}
+
+public extension Dep.Project.Module.DesignSystem {
+    static func project(name: String) -> Dep { .project(target: name, path: .relativeToRoot("Projects/Modules/DesignSystem/\(name)")) }
+
+    static let DesignSystemKit   = project(name: "DesignSystemKit")
+    static let DesignResourceKit = project(name: "DesignResourceKit")
 }
 
 public extension Dep.Project.Module.Foundation {

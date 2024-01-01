@@ -2,14 +2,14 @@
 //  Project.swift
 //  ProjectDescriptionHelpers
 //
-//  Created by 고병학 on 2023/01/27.
+//  Created by 고병학 on 2023/03/19.
 //
 
 import ProjectDescription
 import ProjectDescriptionHelpers
 import UtilityPlugin
 
-let frameworkName: String = "Splash"
+let frameworkName: String = "Onboarding"
 
 let frameworkTargets: [Target] = FrameworkFactory(
     dependency: .init(
@@ -39,4 +39,5 @@ let project = ProjectFactory(
         organizationName: "kr.byunghak"
     )
 )
+
 

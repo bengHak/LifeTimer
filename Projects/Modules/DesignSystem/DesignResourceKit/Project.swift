@@ -1,30 +1,19 @@
-//
-//  Project.swift
-//  ProjectDescriptionHelpers
-//
-//  Created by 고병학 on 2023/01/27.
-//
-
 import ProjectDescription
 import ProjectDescriptionHelpers
 import UtilityPlugin
 
-let frameworkName: String = "Splash"
+let frameworkName: String = "DesignResourceKit"
 
 let frameworkTargets: [Target] = FrameworkFactory(
     dependency: .init(
-        frameworkDependencies: [
-            Dep.Project.Module.Foundation.FoundationKit,
-            Dep.Project.Module.Core.RxPackageExt,
-            Dep.Project.Module.Core.ThirdPartyLibrary,
-            Dep.Project.Module.DesignSystem.DesignSystemKit
-        ],
+        frameworkDependencies: [],
         unitTestsDependencies: []
     )
-).buildRiblet(
+).build(
     payload: .init(
         name: frameworkName,
-        platform: .iOS
+        platform: .iOS,
+        hasResource: true
     )
 )
 
@@ -39,4 +28,3 @@ let project = ProjectFactory(
         organizationName: "kr.byunghak"
     )
 )
-
