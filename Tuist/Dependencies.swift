@@ -15,7 +15,7 @@ let spm = SwiftPackageManagerDependencies([
     
     // Rx
     .remote(url: "https://github.com/ReactorKit/ReactorKit", requirement: .upToNextMajor(from: "3.2.0")),
-    .remote(url: "https://github.com/ReactiveX/RxSwift", requirement: .upToNextMajor(from: "6.5.0")),
+    .remote(url: "https://github.com/ReactiveX/RxSwift", requirement: .upToNextMajor(from: "6.6.0")),
     .remote(url: "https://github.com/RxSwiftCommunity/RxDataSources",requirement: .upToNextMajor(from: "5.0.2")),
     
     // Utils
@@ -24,6 +24,7 @@ let spm = SwiftPackageManagerDependencies([
     
     // UI
     .remote(url: "https://github.com/SnapKit/SnapKit", requirement: .upToNextMajor(from: "5.6.0")),
+    .remote(url: "https://github.com/layoutBox/FlexLayout", requirement: .upToNextMajor(from: "2.0.0")),
     
     // Networking
     .remote(url: "https://github.com/onevcat/Kingfisher", requirement: .upToNextMajor(from: "7.4.1")),
