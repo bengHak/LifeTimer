@@ -11,7 +11,7 @@ let carthage = CarthageDependencies([])
 
 let spm = SwiftPackageManagerDependencies([
     // RIBs
-    .remote(url: "https://github.com/uber/RIBs", requirement: .upToNextMajor(from: "0.13.2")),
+    .remote(url: "https://github.com/uber/RIBs", requirement: .upToNextMajor(from: "0.16.2")),
     
     // Rx
     .remote(url: "https://github.com/ReactorKit/ReactorKit", requirement: .upToNextMajor(from: "3.2.0")),
