@@ -11,7 +11,7 @@ import UtilityPlugin
 
 let appName: String = "LifeTimer"
 
-let infoPlist: [String: InfoPlist.Value] = [
+let infoPlist: [String: Plist.Value] = [
     "CFBundleExecutable": "$(EXECUTABLE_NAME)",
     "CFBundleShortVersionString": "1.0",
     "CFBundleVersion": "1",
